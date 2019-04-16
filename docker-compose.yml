@@ -1,0 +1,50 @@
+version: '3.7'
+
+services:
+  #############################################################################
+  # Django configurations
+  django:
+    build:
+      context: ./personal_website
+      dockerfile: Dockerfile_Django
+    command: gunicorn personal_website.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./personal_website/:/usr/src/personal_website/
+      - static_volume:/usr/src/personal_website/static
+    ports:
+      - 8000
+    environment:
+      - SECRET_KEY='0(-inn8vme&c_2a8shor7z8c@(8p#1*n_n@rlwv&wufi-hx9ga'
+      - SQL_ENGINE=django.db.backends.postgresql
+      - SQL_DATABASE=postgres
+      - SQL_USER=postgres
+      - SQL_PASSWORD=postgres
+      - SQL_HOST=postgres_server
+      - SQL_PORT=5432
+      - DATABASE=postgres
+    depends_on:
+      - postgres_server
+
+  #############################################################################
+  # Postgres Configurations
+  postgres_server:
+     image: postgres:10.5-alpine
+     volumes:
+       - postgres_data:/var/lib/postgressql/data/
+
+  #############################################################################
+  # Nginx Configurations
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile_Nginx
+    volumes:
+      - static_volume:/usr/src/personal_website/static
+    ports:
+      - 1337:80
+    depends_on:
+      - django
+
+volumes:
+  postgres_data:
+  static_volume:
