@@ -1,0 +1,10 @@
+html {
+    /* background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 228, 252, 1) 100%); */
+    /* background: rgb(16, 18, 161);
+    background: linear-gradient(0deg, rgba(16, 18, 161, 1) 5%, rgba(104, 231, 221, 1) 39%); */
+    /* background: rgb(16, 18, 161);
+    background: linear-gradient(0deg, rgba(16, 18, 161, 1) 40%, rgba(104, 231, 221, 1) 65%); */
+    background: rgb(34, 114, 195);
+    background: linear-gradient(0deg, rgba(34, 114, 195, 1) 15%, rgba(45, 191, 253, 1) 85%);
+}

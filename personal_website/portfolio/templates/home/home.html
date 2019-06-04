@@ -1,8 +1,13 @@
-<html>
-    <head>
+{% extends 'home/base.html' %}
 
-    </head>
-    <body>
+{% load static %}
+
+{% block head %}
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div id="head-div">
         <p>Hi, this page will be back online shortly!</p>
-    </body>
-</html>
+    </div>
+{% endblock %}

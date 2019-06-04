@@ -4,6 +4,7 @@ services:
   #############################################################################
   # Django configurations
   django:
+    container_name: personal_django
     build:
       context: ./personal_website
       dockerfile: Dockerfile_Django
@@ -28,21 +29,23 @@ services:
   #############################################################################
   # Postgres Configurations
   postgres_server:
-     image: postgres:10.5-alpine
-     volumes:
-       - postgres_data:/var/lib/postgressql/data/
+    container_name: personal_postgres
+    image: postgres:10.5-alpine
+    volumes:
+      - postgres_data:/var/lib/postgressql/data/
 
   #############################################################################
   # Nginx Configurations
   nginx:
+    container_name: personal_nginx
     build:
       context: ./nginx
       dockerfile: Dockerfile_Nginx
     volumes:
       - static_volume:/usr/src/personal_website/static
     ports:
-      - 80:80
-      - 443:443
+      - 2019:80
+      # - 443:443
     depends_on:
       - django
 
