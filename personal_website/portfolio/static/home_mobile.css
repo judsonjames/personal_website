@@ -1,0 +1,43 @@
+@media only screen and (max-width: 425px) {
+    #profile-block {
+        margin-left: 0px;
+        margin-right: 0px;
+        /* width: 100%; */
+        /* border-radius: 0; */
+    }
+
+    #text-container {
+        margin-left: 0;
+        margin-right: 0;
+        /* border-radius: 0; */
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 650px) {
+    #profile-block {
+        margin-left: 20%;
+        margin-right: 20%;
+        align-self: center;
+    }
+
+    #text-container {
+        margin-left: 0;
+        margin-right: 0;
+        /* border-radius: 0; */
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+    #profile-block {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 1050px) {
+    #profile-block {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}

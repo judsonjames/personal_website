@@ -1,5 +1,156 @@
-#head-div {
+/* 
+  Body of the HTML should only have the background gradient.
+*/
+html {
+    background: linear-gradient(0deg, rgba(34, 114, 195, 1) 15%, rgba(45, 191, 253, 1) 85%);
+}
+
+
+/*
+  Profile Picture and Bio
+*/
+#pretty-container {
+    display: block;
+}
+
+#profile-pic {
+    z-index: 1;
+    border-radius: 50%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    top: 10%;
+}
+
+#profile-block {
+    z-index: 0;
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     background-color: whitesmoke;
-    width: 75%;
-    margin: 0 auto;
+    margin-top: 5%;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    text-align: center;
+    overflow: hidden;
+    -moz-box-shadow: 0 0 20px black;
+    -webkit-box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 100%;
+    margin-bottom: 2%;
+}
+
+/*
+  This is for the text that I plan to show, overriden in mobile
+*/
+#text-container {
+    background-color: whitesmoke;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2.5%;
+    border-radius: 5%;
+}
+
+.text-bodies {
+    text-align: left;
+}
+
+section {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Lists and stuff */
+ul li {
+    list-style: none;
+    float: left;
+}
+
+ul li:before {
+    content: '✓';
+}
+.project-listing {
+    text-align: center;
+}
+
+
+
+
+/* Image Control */
+.column {
+    float: left;
+    width: 25%;
+    height: 50%;
+    margin: 0%;
+    text-align: center;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.project-pic {
+    height: auto;
+    width: 50%;
+}
+
+/* Flex from Thorya */
+.programming-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.programming-container>div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.project-container>div {
+    width: 500px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+.tools-packages-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.tools-packages-container>div {
+    width: 500px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    content: '✓';
+
+}
+
+.text-header {
+    text-align: center;
 }

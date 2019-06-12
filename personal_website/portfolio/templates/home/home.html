@@ -3,11 +3,89 @@
 {% load static %}
 
 {% block head %}
-        <link rel="stylesheet" href="{% static 'home.css' %}">
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<link rel="stylesheet" href="{% static 'home_mobile.css' %}">
 {% endblock %}
 
 {% block body %}
-    <div id="head-div">
-        <p>Hi, this page will be back online shortly!</p>
+<div id="pretty-container">
+    <div id="profile-block">
+        <img id="profile-pic" src="{% static 'img/profile_pic.jpeg' %}">
+        <h1>Judson James</h1>
+        <h2>Software Developer</h2>
+        <p><a href="mailto: judsonjames96@gmail.com">judsonjames96@gmail.com</a></p>
+        <p><a href="https://github.com/judsonjames/" target="_blank">https://github.com/judsonjames/</a></p>
     </div>
+</div>
+<div id="text-container">
+    <br>
+    <!-- Projects -->
+    <section class="text-bodies">
+        <p class="text-header">Projects and Collaborations</p>
+        <div class="project-container">
+            <div>
+                <img class="project-pic" src="{% static 'img/duss_logo.jpeg' %}" alt="duss">
+                <p>Digital US South</p>
+            </div>
+            <div>
+                <img class="project-pic" src="{% static 'img/overlap.png' %}">
+                <p>Overlap Calendar</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Programming Languages -->
+    <section class="text-bodies">
+        <p class="text-header">Programming Languages</p>
+        <div class="programming-container">
+            <div>
+                <img class="project-pic" src="{% static 'img/c++.png' %}">
+                <p>✓C/C++</p>
+            </div>
+            <div>
+                <img class="project-pic" src="{% static 'img/c#.png' %}">
+                <p>✓C#</p>
+            </div>
+            <div>
+                <img class="project-pic" src="{% static 'img/java.png' %}">
+                <p>✓Java</p>
+            </div>
+            <div>
+                <img class="project-pic" src="{% static 'img/javascript.png' %}">
+                <p>✓JavaScript</p>
+            </div>
+            <div>
+                <img class="project-pic" src="{% static 'img/python.png' %}">
+                <p>✓Python</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- Language Packages-->
+    <section class="text-bodies">
+        <p class="text-header">Packages</p>
+        <div class="tools-packages-container">
+            <div>✓Django</div>
+            <div>✓Node.js</div>
+            <div>✓Selenium</div>
+            <div>✓Unity3d</div>
+            <div>✓Unreal4</div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <!-- Tools -->
+    <section class="text-bodies">
+        <p class="text-header">Tools and Applications</p>
+        <div class="tools-packages-container">
+            <div>✓Docker</div>
+            <div>✓Git</div>
+            <div>✓Nginx</div>
+            <div>✓PostgreSQL</div>
+            <div>✓Vim</div>
+        </div>
+    </section>
+    <br>
+    <br>
+</div>
 {% endblock %}
